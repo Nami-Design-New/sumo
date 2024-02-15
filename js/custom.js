@@ -247,8 +247,6 @@ $(document).ready(function () {
       this.swiper.autoplay.start();
     }
   );
-
-
   $(".cardBack .limet").each(function () {
     var text = $(this).text();
     if (text.length > 200) {
