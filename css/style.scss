@@ -762,6 +762,9 @@ header {
     padding: 24px;
     border-radius: 12px;
     width: min(100% - 24px, 1320px);
+    @media screen and (max-width: 768px) {
+      padding: 24px 12px;
+    }
     label {
       font-weight: bold;
       font-size: 14px;
@@ -781,10 +784,9 @@ header {
     }
   }
 }
-
 .sectionTitle {
   font-weight: bold;
-  text-transform: uppercase;
+  text-transform: capitalize;
   padding: 20px 0 24px;
   padding-right: 16px;
   position: relative;
@@ -810,10 +812,9 @@ header {
     border-radius: 12px;
   }
 }
-
 .flipCard {
   height: 350px;
-  width: 250px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -827,14 +828,11 @@ header {
     padding: 20px;
     border-radius: 20px;
     display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: $whiteColor;
     backface-visibility: hidden;
     transform: rotateY(0deg);
     transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
     box-shadow: 0 0.5rem 1rem #0000000d;
-
     .cardLogo {
       width: 100%;
       max-height: 200px;
@@ -845,16 +843,24 @@ header {
       display: flex;
       flex-direction: column;
       width: 100%;
-      // margin-top: auto;
-      gap: 4px;
-      text-align: center;
+      gap: 8px;
       .title {
         font-weight: bold;
         font-size: 20px;
-        color: #000;
+        color: $darkColor;
+        margin-bottom: auto;
       }
-      .job {
-        font-size: 12px;
+      .location,
+      .date {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        // font-weight: bold;
+        img {
+          width: 16px;
+          aspect-ratio: 1/1;
+          object-fit: contain;
+        }
       }
     }
   }
@@ -874,27 +880,25 @@ header {
       height: 100%;
       display: flex;
       flex-direction: column;
+      gap: 8px;
       .favimg {
         width: 48px;
         height: 48px;
         object-fit: contain;
-        margin-bottom: 16px;
       }
       .title {
         font-weight: bold;
         color: $mainColor;
         font-size: 18px;
-        margin-bottom: 4px;
-      }
-      .job {
-        color: #777;
-        font-size: 14px;
-        margin-bottom: 12px;
-        font-weight: bold;
       }
       .des {
         color: #777;
         font-size: 14px;
+        flex: 1;
+        overflow: hidden;
+      }
+      .animatedLink {
+        margin-left: auto;
       }
     }
   }
@@ -907,39 +911,22 @@ header {
       transform: rotateY(0deg);
     }
   }
-
-  .downloadLinks {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    flex-wrap: wrap;
-    padding-top: 4px;
-    margin-top: auto;
-    .divV {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      flex: 1;
-      align-items: center;
-    }
-    img {
-      height: 32px;
-      width: 100%;
-      object-position: center;
-      object-fit: contain;
-      &.qr {
-        height: auto;
-        aspect-ratio: 1/1;
-        object-fit: contain;
-      }
-    }
-  }
 }
-
-.confirmedCourses{
-  padding: 40px 0;
-  .sectionTitle{
-    text-transform: capitalize;
+.confirmedCourses {
+  padding: 40px 12px;
+  .swiperControl {
+    padding: 0;
+  }
+  .swiper-wrapper {
+    padding: 24px 0;
+  }
+  .sectionTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center !important;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
   }
 }

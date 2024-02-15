@@ -775,6 +775,11 @@ header.headerAnimate {
   border-radius: 12px;
   width: min(100% - 24px, 1320px);
 }
+@media screen and (max-width: 768px) {
+  .coursesfilter .container {
+    padding: 24px 12px;
+  }
+}
 .coursesfilter .container label {
   font-weight: bold;
   font-size: 14px;
@@ -795,7 +800,7 @@ header.headerAnimate {
 
 .sectionTitle {
   font-weight: bold;
-  text-transform: uppercase;
+  text-transform: capitalize;
   padding: 20px 0 24px;
   padding-right: 16px;
   position: relative;
@@ -825,7 +830,7 @@ header.headerAnimate {
 
 .flipCard {
   height: 350px;
-  width: 250px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -842,8 +847,6 @@ header.headerAnimate {
   padding: 20px;
   border-radius: 20px;
   display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: #ffffff;
   backface-visibility: hidden;
   transform: rotateY(0deg);
@@ -861,16 +864,26 @@ header.headerAnimate {
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 4px;
-  text-align: center;
+  gap: 8px;
 }
 .flipCard .cardFront .content .title {
   font-weight: bold;
   font-size: 20px;
-  color: #000;
+  color: #131518;
+  margin-bottom: auto;
 }
-.flipCard .cardFront .content .job {
-  font-size: 12px;
+.flipCard .cardFront .content .location,
+.flipCard .cardFront .content .date {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.flipCard .cardFront .content .location img,
+.flipCard .cardFront .content .date img {
+  width: 16px;
+  aspect-ratio: 1/1;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .flipCard .cardBack {
   padding: 20px;
@@ -889,29 +902,27 @@ header.headerAnimate {
   height: 100%;
   display: flex;
   flex-direction: column;
+  gap: 8px;
 }
 .flipCard .cardBack .content .favimg {
   width: 48px;
   height: 48px;
   -o-object-fit: contain;
      object-fit: contain;
-  margin-bottom: 16px;
 }
 .flipCard .cardBack .content .title {
   font-weight: bold;
   color: #064252;
   font-size: 18px;
-  margin-bottom: 4px;
-}
-.flipCard .cardBack .content .job {
-  color: #777;
-  font-size: 14px;
-  margin-bottom: 12px;
-  font-weight: bold;
 }
 .flipCard .cardBack .content .des {
   color: #777;
   font-size: 14px;
+  flex: 1;
+  overflow: hidden;
+}
+.flipCard .cardBack .content .animatedLink {
+  margin-left: auto;
 }
 .flipCard:hover {
   z-index: 2;
@@ -922,40 +933,24 @@ header.headerAnimate {
 .flipCard:hover .cardBack {
   transform: rotateY(0deg);
 }
-.flipCard .downloadLinks {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  flex-wrap: wrap;
-  padding-top: 4px;
-  margin-top: auto;
-}
-.flipCard .downloadLinks .divV {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  flex: 1;
-  align-items: center;
-}
-.flipCard .downloadLinks img {
-  height: 32px;
-  width: 100%;
-  -o-object-position: center;
-     object-position: center;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-.flipCard .downloadLinks img.qr {
-  height: auto;
-  aspect-ratio: 1/1;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
 
 .confirmedCourses {
-  padding: 40px 0;
+  padding: 40px 12px;
 }
-.confirmedCourses .sectionTitle {
-  text-transform: capitalize;
+.confirmedCourses .swiperControl {
+  padding: 0;
+}
+.confirmedCourses .swiper-wrapper {
+  padding: 24px 0;
+}
+.confirmedCourses .sectionTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center !important;
+}
+@media (max-width: 768px) {
+  .confirmedCourses .sectionTop {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=style.css.map */

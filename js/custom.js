@@ -204,20 +204,60 @@ $(document).ready(function () {
   //     this.swiper.autoplay.start();
   //   }
   // );
-
-
-  $(".cardBack .limet").each(
-    function() {
-        var text = $(this).text();
-        if (text.length > 170) {
-            var truncatedText =
-                $.trim(text).substring(0, 170).split(" ").slice(0, -1).join(" ") +
-                "...";
-            $(this).text(truncatedText);
-        }
+  // Courses
+  var Courses = new Swiper(".Courses", {
+    navigation: {
+      nextEl: ".CoursesNext",
+      prevEl: ".CoursesPrev",
+    },
+    pagination: {
+      el: ".CoursesPagination",
+      type: "fraction",
+    },
+    loop: true,
+    spaceBetween: 12,
+    speed: 1000,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      450: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      991: {
+        slidesPerView: 4,
+      },
+      1200: {
+        slidesPerView: 5,
+      },
+    },
+  });
+  $(".Courses").hover(
+    function () {
+      this.swiper.autoplay.stop();
+    },
+    function () {
+      this.swiper.autoplay.start();
     }
-);
+  );
 
+
+  $(".cardBack .limet").each(function () {
+    var text = $(this).text();
+    if (text.length > 200) {
+      var truncatedText =
+        $.trim(text).substring(0, 200).split(" ").slice(0, -1).join(" ") +
+        "...";
+      $(this).text(truncatedText);
+    }
+  });
 });
 // ////////////////////////////////////////
 // ////////////////////////////////////////
