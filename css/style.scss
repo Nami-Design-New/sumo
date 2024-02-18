@@ -1,6 +1,8 @@
 $mainColor: #064252;
-$mainColor20: #bdcdd1;
-$mainColor05: #ebf0f1;
+// $mainColor20: #bdcdd1;
+// $mainColor05: #ebf0f1;
+$mainColor20: #06425240;
+$mainColor05: #0642520d;
 $secondColor: #71c0e4;
 $gradiantColor: linear-gradient(45deg, #064252 15%, #71c0e4 70%);
 $goldColor: #f4bd4b;
@@ -755,7 +757,7 @@ header {
 .coursesfilter {
   position: relative;
   z-index: 2;
-  padding-bottom: 24px;
+  padding-bottom: 60px;
   .container {
     background-color: $whiteColor;
     box-shadow: $BigShadow;
@@ -913,7 +915,9 @@ header {
   }
 }
 .confirmedCourses {
-  padding: 40px 12px;
+  padding: 60px 12px;
+  background-color: $mainColor05;
+  z-index: 1;
   .swiperControl {
     padding: 0;
   }
@@ -927,6 +931,110 @@ header {
     text-align: center !important;
     @media (max-width: 768px) {
       flex-direction: column;
+    }
+  }
+}
+
+.categories {
+  padding: 60px 0;
+  overflow: hidden;
+  &::before{
+    position: absolute;
+    right: 5dvw;
+    top: 40px;
+    z-index: 0;
+    content: '';
+    width: 20dvw;
+    aspect-ratio: 1/1;
+    background-image: url(../img/shape.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: .2;
+
+  }
+  .container {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    .top {
+      width: 100%;
+    }
+    .side {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      aspect-ratio: 2/1;
+      .category {
+        display: flex;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+        min-height: 250px;
+        min-width: 300px;
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(to top, #0f0f10, #1111120d);
+          z-index: 2;
+          transition: $transition;
+          opacity: .8;
+
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          position: absolute;
+          z-index: 1;
+          transition: $transition;
+          filter: grayscale(1);
+        }
+        .info {
+          position: relative;
+          z-index: 3;
+          padding: 24px;
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          justify-content: end;
+          // flex-direction: column-reverse;
+          color: $whiteColor;
+          width: 100%;
+
+          .name {
+            font-weight: bold;
+            text-transform: capitalize;
+          }
+          .count {
+            display: flex;
+            gap: 4px;
+            flex-wrap: wrap;
+            align-items: center;
+            text-transform: capitalize;
+            span {
+              // font-size: 60px;
+              // font-weight: bold;
+            }
+          }
+        }
+
+        &:hover {
+          &::after {
+            opacity: 1;
+          }
+          img {
+            transform: rotate(1deg) scale(1.02);
+            filter: grayscale(.3);
+          }
+        }
+      }
     }
   }
 }
