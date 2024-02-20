@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Primary Meta Tags -->
+    <title> Somu </title>
+    <meta name="title" content=" Somu ">
+    <meta name="description" content="">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/fav.svg" />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- main -->
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- Custom style  -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div class="bodyOverlay"></div>
+    <!-- ================ loader ================= -->
+    <div class="preloader">
+        <div class="preloaderImg"></div>
+    </div>
+    <!-- ================ Header ================= -->
+    <header>
+        <section class="inner">
+            <!-- brand -->
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.svg" loading="lazy" alt="">
+            </a>
+            <!-- navbar -->
+            <nav class="navbar navbar-expand-lg">
+                <button class="navbar-toggler">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <ul class="navbar-nav">
+                    <a class="navLink" href="index.html"> home </a>
+                    <a class="navLink active" href="courses.html"> Courses </a>
+                    <a class="navLink" href="somu-tech.html"> Somu Tech </a>
+                    <a class="navLink" href="e-learning.html"> E-Learning </a>
+                    <a class="navLink" href="corporate-solutions.html"> Corporate solutions </a>
+                    <a class="navLink" href="about-us.html"> about Us</a>
+                    <a class="navLink" href="contact-us.html"> Contact Us </a>
+                </ul>
+            </nav>
+            <!-- Actions -->
+            <div class="moreActions">
+                <a href="#!"> عربي </a>
+            </div>
+        </section>
+    </header>
+    <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
+    <!--((((((((((((((((((( content )))))))))))))))))))-->
+    <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
+    <content>
+        <section class="courses_section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-12 p-2">
+                        <div class="d-flex justify-content-between align-items-center small-filter-header">
+                            <h6><i class="fa-sharp fa-solid fa-filter"></i> Advanced Filter</h6>
+                            <button class="openfilter">
+                                <i class="fa-light fa-sliders"></i>
+                            </button>
+                        </div>
+                        <div class="exploreFilter" id="sideMenu">
+                            <form action="">
+                                <div class="head">
+                                    <h3><i class="fa-sharp fa-solid fa-filter"></i> Advanced Filter</h3>
+                                    <div class="colse">
+                                        <i class="fa-light fa-xmark"></i>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <label for="courseName"> Course Name </label>
+                                    <input type="text" name="courseName" id="courseName" class="form-control"
+                                        placeholder="Course Name">
+                                </div>
+                                <div class="field">
+                                    <label for="courseCategory "> Category </label>
+                                    <select name="" id="courseCategory" class="form-control">
+                                        <option value="Management"> Management </option>
+                                        <option value="Technical"> Technical </option>
+                                        <option value="Safety"> Safety </option>
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <label for="location">Location</label>
+                                    <select class="form-control selectbox" name="location">
+                                        <option value="">
+                                            City </option>
+                                        <option value="Saudi Arabia  Al-Khobar">
+                                            Saudi Arabia Al-Khobar </option>
+                                        <option value="UAE  Dubai">
+                                            UAE Dubai </option>
+                                        <option value="Czech Republic; Prague ">
+                                            Czech Republic; Prague </option>
+                                        <option value="Saudi Arabia, Al-Khobar">
+                                            Saudi Arabia, Al-Khobar </option>
+                                        <option value="Saudi Arabia  Jeddah">
+                                            Saudi Arabia Jeddah </option>
+                                        <option value="Bahrain  Manama">
+                                            Bahrain Manama </option>
+                                        <option value="Saudi Arabia; Riyadh">
+                                            Saudi Arabia; Riyadh </option>
+                                        <option value="UK  London">
+                                            UK London </option>
+                                        <option value="France; Paris">
+                                            France; Paris </option>
+                                        <option value="Turkey;Istanbul">
+                                            Turkey;Istanbul </option>
+                                        <option value="Spain; Barcelona ">
+                                            Spain; Barcelona </option>
+                                        <option value="Malaysia  Kuala Lumpur">
+                                            Malaysia Kuala Lumpur </option>
+                                        <option value="Egypt  Sharm Al-Shaikh">
+                                            Egypt Sharm Al-Shaikh </option>
+                                        <option value="Saudi Arabia  Abha">
+                                            Saudi Arabia Abha </option>
+                                        <option value="Egypt  Cairo">
+                                            Egypt Cairo </option>
+                                        <option value="Saudi Arabia, Jeddah">
+                                            Saudi Arabia, Jeddah </option>
+                                        <option value="UAE, Dubai">
+                                            UAE, Dubai </option>
+                                        <option value="Bahrain, Manama">
+                                            Bahrain, Manama </option>
+                                        <option value="UK, London">
+                                            UK, London </option>
+                                        <option value="Singapore">
+                                            Singapore </option>
+                                        <option value="Amesterdam; Holand">
+                                            Amesterdam; Holand </option>
+                                        <option value="Malaysia, Kuala Lumpur">
+                                            Malaysia, Kuala Lumpur </option>
+                                        <option value="Saudi Arabia, Jubail">
+                                            Saudi Arabia, Jubail </option>
+                                        <option value="Vienna; Austria">
+                                            Vienna; Austria </option>
+                                        <option value="Egypt, Sharm Al-Shaikh">
+                                            Egypt, Sharm Al-Shaikh </option>
+                                        <option value="Lisbon; Portogal">
+                                            Lisbon; Portogal </option>
+                                        <option value="Egypt, Cairo">
+                                            Egypt, Cairo </option>
+                                        <option value="USA; New York">
+                                            USA; New York </option>
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <label for="startDate"> Start Date </label>
+                                    <input type="date" name="startDate" id="startDate" class="form-control">
+                                </div>
+                                <div class="field">
+                                    <label for="endDate"> End Date </label>
+                                    <input type="date" name="endDate" id="endDate" class="form-control">
+                                </div>
+                                <button class="apply">
+                                    Apply
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-12 p-0">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-12 p-2">
+                                <div class="course_card">
+                                    <div class="content">
+                                        <h5 class="title"> Leading Innovation in your Team </h5>
+                                        <div class="time_date">
+                                            <p class="date"> <img src="img/icons/date.svg" alt=""> 2023-02-12 </p>
+                                            <p class="location"><img src="img/icons/location.svg" alt=""> Saudi Arabia,
+                                                Al-Khobar
+                                            </p>
+                                            <a href="course-details.html" class="animatedLink">
+                                                Register Now
+                                                <span>
+                                                    <img src="img/icons/arrowLink.svg" alt="">
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-12 p-2">
+                                <div class="course_card">
+                                    <div class="content">
+                                        <h5 class="title"> Leading Innovation in your Team </h5>
+                                        <div class="time_date">
+                                            <p class="date"> <img src="img/icons/date.svg" alt=""> 2023-02-12 </p>
+                                            <p class="location"><img src="img/icons/location.svg" alt=""> Saudi Arabia,
+                                                Al-Khobar
+                                            </p>
+                                            <a href="course-details.html" class="animatedLink">
+                                                Register Now
+                                                <span>
+                                                    <img src="img/icons/arrowLink.svg" alt="">
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-12 p-2">
+                                <div class="course_card">
+                                    <div class="content">
+                                        <h5 class="title"> Leading Innovation in your Team </h5>
+                                        <div class="time_date">
+                                            <p class="date"> <img src="img/icons/date.svg" alt=""> 2023-02-12 </p>
+                                            <p class="location"><img src="img/icons/location.svg" alt=""> Saudi Arabia,
+                                                Al-Khobar
+                                            </p>
+                                            <a href="course-details.html" class="animatedLink">
+                                                Register Now
+                                                <span>
+                                                    <img src="img/icons/arrowLink.svg" alt="">
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-12 p-2">
+                                <div class="course_card">
+                                    <div class="content">
+                                        <h5 class="title"> Leading Innovation in your Team </h5>
+                                        <div class="time_date">
+                                            <p class="date"> <img src="img/icons/date.svg" alt=""> 2023-02-12 </p>
+                                            <p class="location"><img src="img/icons/location.svg" alt=""> Saudi Arabia,
+                                                Al-Khobar
+                                            </p>
+                                            <a href="course-details.html" class="animatedLink">
+                                                Register Now
+                                                <span>
+                                                    <img src="img/icons/arrowLink.svg" alt="">
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-12 p-2">
+                                <div class="course_card">
+                                    <div class="content">
+                                        <h5 class="title"> Leading Innovation in your Team </h5>
+                                        <div class="time_date">
+                                            <p class="date"> <img src="img/icons/date.svg" alt=""> 2023-02-12 </p>
+                                            <p class="location"><img src="img/icons/location.svg" alt=""> Saudi Arabia,
+                                                Al-Khobar
+                                            </p>
+                                            <a href="course-details.html" class="animatedLink">
+                                                Register Now
+                                                <span>
+                                                    <img src="img/icons/arrowLink.svg" alt="">
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-12 p-2">
+                                <div class="course_card">
+                                    <div class="content">
+                                        <h5 class="title"> Leading Innovation in your Team </h5>
+                                        <div class="time_date">
+                                            <p class="date"> <img src="img/icons/date.svg" alt=""> 2023-02-12 </p>
+                                            <p class="location"><img src="img/icons/location.svg" alt=""> Saudi Arabia,
+                                                Al-Khobar
+                                            </p>
+                                            <a href="course-details.html" class="animatedLink">
+                                                Register Now
+                                                <span>
+                                                    <img src="img/icons/arrowLink.svg" alt="">
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-12 p-2">
+                                <div class="course_card">
+                                    <div class="content">
+                                        <h5 class="title"> Leading Innovation in your Team </h5>
+                                        <div class="time_date">
+                                            <p class="date"> <img src="img/icons/date.svg" alt=""> 2023-02-12 </p>
+                                            <p class="location"><img src="img/icons/location.svg" alt=""> Saudi Arabia,
+                                                Al-Khobar
+                                            </p>
+                                            <a href="course-details.html" class="animatedLink">
+                                                Register Now
+                                                <span>
+                                                    <img src="img/icons/arrowLink.svg" alt="">
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-12 p-2">
+                                <div class="course_card">
+                                    <div class="content">
+                                        <h5 class="title"> Leading Innovation in your Team </h5>
+                                        <div class="time_date">
+                                            <p class="date"> <img src="img/icons/date.svg" alt=""> 2023-02-12 </p>
+                                            <p class="location"><img src="img/icons/location.svg" alt=""> Saudi Arabia,
+                                                Al-Khobar
+                                            </p>
+                                            <a href="course-details.html" class="animatedLink">
+                                                Register Now
+                                                <span>
+                                                    <img src="img/icons/arrowLink.svg" alt="">
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-12 p-2">
+                                <div class="course_card">
+                                    <div class="content">
+                                        <h5 class="title"> Leading Innovation in your Team </h5>
+                                        <div class="time_date">
+                                            <p class="date"> <img src="img/icons/date.svg" alt=""> 2023-02-12 </p>
+                                            <p class="location"><img src="img/icons/location.svg" alt=""> Saudi Arabia,
+                                                Al-Khobar
+                                            </p>
+                                            <a href="course-details.html" class="animatedLink">
+                                                Register Now
+                                                <span>
+                                                    <img src="img/icons/arrowLink.svg" alt="">
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-12 p-2">
+                                <div class="course_card">
+                                    <div class="content">
+                                        <h5 class="title"> Leading Innovation in your Team </h5>
+                                        <div class="time_date">
+                                            <p class="date"> <img src="img/icons/date.svg" alt=""> 2023-02-12 </p>
+                                            <p class="location"><img src="img/icons/location.svg" alt=""> Saudi Arabia,
+                                                Al-Khobar
+                                            </p>
+                                            <a href="course-details.html" class="animatedLink">
+                                                Register Now
+                                                <span>
+                                                    <img src="img/icons/arrowLink.svg" alt="">
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-12 p-2">
+                                <div class="course_card">
+                                    <div class="content">
+                                        <h5 class="title"> Leading Innovation in your Team </h5>
+                                        <div class="time_date">
+                                            <p class="date"> <img src="img/icons/date.svg" alt=""> 2023-02-12 </p>
+                                            <p class="location"><img src="img/icons/location.svg" alt=""> Saudi Arabia,
+                                                Al-Khobar
+                                            </p>
+                                            <a href="course-details.html" class="animatedLink">
+                                                Register Now
+                                                <span>
+                                                    <img src="img/icons/arrowLink.svg" alt="">
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-12 p-2">
+                                <div class="course_card">
+                                    <div class="content">
+                                        <h5 class="title"> Leading Innovation in your Team </h5>
+                                        <div class="time_date">
+                                            <p class="date"> <img src="img/icons/date.svg" alt=""> 2023-02-12 </p>
+                                            <p class="location"><img src="img/icons/location.svg" alt=""> Saudi Arabia,
+                                                Al-Khobar
+                                            </p>
+                                            <a href="course-details.html" class="animatedLink">
+                                                Register Now
+                                                <span>
+                                                    <img src="img/icons/arrowLink.svg" alt="">
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </content>
+    <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
+    <!--((((((((((((((((( / content )))))))))))))))))))-->
+    <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
+    <!-- ================ Footer ================= -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-12">
+                    <div class="img">
+                        <a href="index.html">
+                            <img src="img/logo.svg" alt="logo">
+                        </a>
+                    </div>
+                    <div class="about">
+                        <p>
+                            SOMU training center is an commenced operations founded in 2012 and is a National Training
+                            Organization
+                            delivering nationally recognized qualifications across Saudi Arabia.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-12">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li>
+                            <a href=""><span><i class="fa-solid fa-arrow-right-long"></i></span> Courses</a>
+                        </li>
+                        <li>
+                            <a href=""><span><i class="fa-solid fa-arrow-right-long"></i></span> About us</a>
+                        </li>
+                        <li>
+                            <a href=""><span><i class="fa-solid fa-arrow-right-long"></i></span> Contact us</a>
+                        </li>
+                        <li>
+                            <a href=""><span><i class="fa-solid fa-arrow-right-long"></i></span> Training Solutions</a>
+                        </li>
+                        <li>
+                            <a href=""><span><i class="fa-solid fa-arrow-right-long"></i></span> Leadership Training</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 col-12">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li>
+                            <a href=""><span><i class="fa-solid fa-arrow-right-long"></i></span> Terms & Conditions</a>
+                        </li>
+                        <li>
+                            <a href=""><span><i class="fa-solid fa-arrow-right-long"></i></span> Privacy & Policy</a>
+                        </li>
+                        <li>
+                            <a href=""><span><i class="fa-solid fa-arrow-right-long"></i></span> FAQs </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <h3>Connect Us</h3>
+                    <ul class="connect">
+                        <li>
+                            <i class="fa-sharp fa-light fa-location-dot"></i>
+                            <p>
+                                Khobar Prince Faisal Bin Fahed Rd Pepsi Road, Danah Tower
+                            </p>
+                        </li>
+                        <li>
+                            <i class="fa-light fa-phone"></i> <a href="tel:+0138150999">+0138150999</a>
+                        </li>
+                        <li>
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <a href="https://api.whatsapp.com/send?phone=+966558150999">
+                                +966558150999
+                            </a>
+                        </li>
+                        <li>
+                            <i class="fa-light fa-envelope"></i> <a
+                                href="mailto:info@somutraining.com">info@somutraining.com</a>
+                        </li>
+                    </ul>
+                    <ul class="social">
+                        <li>
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" x="0" y="0"
+                                    viewBox="0 0 1226.37 1226.37" style="enable-background:new 0 0 512 512"
+                                    xml:space="preserve" class="">
+                                    <g>
+                                        <path
+                                            d="M727.348 519.284 1174.075 0h-105.86L680.322 450.887 370.513 0H13.185l468.492 681.821L13.185 1226.37h105.866l409.625-476.152 327.181 476.152h357.328L727.322 519.284zM582.35 687.828l-47.468-67.894-377.686-540.24H319.8l304.797 435.991 47.468 67.894 396.2 566.721H905.661L582.35 687.854z"
+                                            fill="#FFFFFF" opacity="1" data-original="#000000">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12">
+                    <div class="copy">
+                        <p>&copy; 2020 © All Rights Reserved for Sumo.</p>
+                        <img src="img/iso9001.png" alt="iso9001">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ================ /Footer ================= -->
+    <!--////////////////////////////////////////////////////////////////////////////////-->
+    <!--////////////////////////////////////////////////////////////////////////////////-->
+    <!--////////////////////////////////////////////////////////////////////////////////-->
+    <!--/////////////////////////////JavaScript/////////////////////////////////////////-->
+    <!--////////////////////////////////////////////////////////////////////////////////-->
+    <!--////////////////////////////////////////////////////////////////////////////////-->
+    <!--////////////////////////////////////////////////////////////////////////////////-->
+    <!-- main -->
+    <script src="js/main.js"></script>
+    <script src="js/gsap.min.js"></script>
+    <!-- custom -->
+    <script src="js/ScrollTrigger.min.js"></script>
+    <script src="js/SplitText.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script>
+        let openFilter = document.querySelector('.openfilter');
+        let sideMenu = document.getElementById("sideMenu");
+        let close = document.querySelector(".colse");
+        openFilter.addEventListener('click', () => {
+            sideMenu.classList.add("active");
+        })
+        close.addEventListener('click', () => {
+            sideMenu.classList.remove("active");
+        })
+    </script>
+</body>
+
+</html>

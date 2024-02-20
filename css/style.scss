@@ -303,7 +303,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1024;
+  z-index: 10;
   transition: $transition;
   @media screen and (max-width: 992px) {
     background-color: $whiteColor;
@@ -928,7 +928,6 @@ header {
     }
   }
 }
-
 .categories {
   padding: 60px 0;
   overflow: hidden;
@@ -1010,13 +1009,8 @@ header {
             flex-wrap: wrap;
             align-items: center;
             text-transform: capitalize;
-            span {
-              // font-size: 60px;
-              // font-weight: bold;
-            }
           }
         }
-
         &:hover {
           &::after {
             opacity: 1;
@@ -1032,6 +1026,7 @@ header {
 }
 footer {
   padding: 60px 8px 16px;
+  background-color: rgba(6, 66, 82, 0.0509803922);
   .img {
     img {
       height: 60px;
@@ -1535,5 +1530,235 @@ footer {
     transform: scale(0.9, 0.9);
     opacity: 0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  }
+}
+.bgs {
+  padding: 0;
+  background-color: rgba(6, 66, 82, 0.0509803922);
+}
+.small-filter-header {
+  width: 100%;
+  display: none !important;
+  padding: 0 2px;
+  h6 {
+    color: $mainColor;
+    margin: 0;
+  }
+  button {
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.02);
+    background: $secondColor;
+    padding: 8px;
+    border-radius: 8px;
+    i {
+      font-size: 18px;
+      color: $mainColor;
+    }
+  }
+  @media (max-width: 992px) {
+    display: flex !important;
+  }
+}
+.exploreFilter {
+  padding: 24px 16px;
+  background: #fff;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.02);
+  border-radius: 20px;
+  position: sticky;
+  top: 100px;
+  .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h3 {
+      font-size: 18px;
+      color: $mainColor;
+      margin-bottom: 8px;
+    }
+    .colse {
+      display: none;
+      cursor: pointer;
+      i {
+        font-size: 24px;
+        color: $mainColor;
+      }
+    }
+  }
+  form {
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+    .field {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      flex: 2;
+      .bootstrap-select .dropdown-toggle .filter-option-inner-inner {
+        font-size: 14px !important;
+      }
+      label {
+        font-weight: 700;
+        font-size: 12px;
+        color: $mainColor;
+      }
+      .bootstrap-select {
+        direction: rtl !important;
+        width: 100% !important;
+      }
+    }
+    .apply {
+      outline: none;
+      border: none;
+      background: none;
+      background: $secondColor;
+      border-radius: 4px;
+      padding: 8px;
+      color: #fff;
+      transition: $transition;
+      &:hover {
+        background: $mainColor;
+      }
+    }
+  }
+  @media (max-width: 992px) {
+    display: block;
+    position: fixed;
+    top: 100%;
+    z-index: 9999;
+    overflow-y: scroll;
+    width: 100%;
+    background: #fff;
+    left: 0;
+    transition: $transition;
+    height: calc(100% - 74px);
+    padding: 32px 24px !important;
+    .head .colse {
+      display: block;
+    }
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    &.active {
+      top: 74px;
+      border-radius: 0;
+    }
+  }
+}
+.courses_section {
+  padding: 60px 0;
+  position: relative;
+  .course_card {
+    background: #fff;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.02);
+    padding: 20px;
+    border-radius: 20px;
+    .content {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 64px;
+      .title {
+        font-weight: bold;
+        font-size: 20px;
+        color: $darkColor;
+        margin-bottom: auto;
+      }
+      .time_date {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        .animatedLink span::after {
+          width: 42px;
+          height: 42px;
+        }
+        .animatedLink span {
+          width: 42px;
+          height: 42px;
+        }
+        .animatedLink span img {
+          width: auto;
+          height: 16px;
+        }
+        .animatedLink:hover span::after {
+          width: 100%;
+        }
+      }
+      .location,
+      .date {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        img {
+          width: 16px;
+          aspect-ratio: 1/1;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
+select {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+.about_course {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  h3 {
+    color: $mainColor;
+    font-weight: 600;
+  }
+  h6 {
+    color: $mainColor;
+  }
+  p {
+    font-size: 14px;
+    color: $grayColor;
+  }
+  .location,
+  .date,
+  .lang {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: $mainColor;
+    font-weight: 600;
+    img {
+      width: 16px;
+      aspect-ratio: 1/1;
+      object-fit: contain;
+    }
+  }
+}
+.registerCourse {
+  padding: 24px 16px;
+  background: #fff;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.02);
+  border-radius: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  label {
+    color: $mainColor;
+    font-size: 14px;
+  }
+  textarea{
+    height: 100px;
+  }
+  button {
+    margin-top: auto;
+    outline: none;
+    border: none;
+    background: none;
+    background: $secondColor;
+    border-radius: 4px;
+    padding: 8px;
+    color: #fff;
+    transition: $transition;
+    &:hover {
+      background: $mainColor;
+    }
   }
 }
