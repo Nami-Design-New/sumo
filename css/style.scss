@@ -680,6 +680,9 @@ header {
       object-fit: contain;
       transition: $transition;
     }
+    i {
+      font-size: 20px;
+    }
     &::after {
       content: "";
       position: absolute;
@@ -1830,4 +1833,126 @@ select {
 .modal-header {
   border: none;
   padding-bottom: 0;
+}
+
+.banner {
+  background-image: url(../img/s.jpg) !important;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom;
+  padding: 150px 0 50px;
+  position: relative;
+  display: flex;
+  isolation: isolate;
+  @media (max-width: 768px) {
+    padding: 200px 0 30px;
+  }
+  &::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: linear-gradient(#ffffff38, #ffffff);
+    z-index: -1;
+  }
+  .links {
+    a {
+      padding: 4px;
+      position: relative;
+      color: $mainColor;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-transform: capitalize;
+      &:last-child {
+        &::after {
+          display: none;
+        }
+      }
+      &::after {
+        content: " ↣ ";
+      }
+      &.active {
+        cursor: default;
+        color: #777;
+      }
+    }
+  }
+  h2 {
+    font-weight: bold;
+    color: $mainColor;
+    text-transform: capitalize;
+    font-family: "RobotoBlack", sans-serif;
+  }
+}
+.partners {
+  position: relative;
+  z-index: 2;
+  padding: 100px 0 20px;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .sectionTitle {
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+  .top {
+    margin-bottom: 40px;
+    text-align: center;
+    .title {
+      font-weight: bold;
+      margin-bottom: 16px;
+      font-size: 36px !important;
+      @media (max-width: 768px) {
+        font-size: 24px !important;
+      }
+    }
+    .hint {
+      color: $grayColor;
+      width: min(100% - 40px, 800px);
+      text-align: start;
+    }
+  }
+  .referenceLogo {
+    height: 150px;
+    padding: 10px 20px;
+    position: relative;
+    &::after {
+      content: "";
+      display: flex;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 0%;
+      background-color: $whiteColor;
+      transition: $transition;
+      z-index: -1;
+    }
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      filter: grayscale(1);
+      transition: $transition;
+    }
+    &:hover {
+      &::after {
+        content: "";
+        height: 100%;
+      }
+      img {
+        filter: none;
+      }
+    }
+  }
+  .swiperControl {
+    position: relative;
+    padding-top: 60px;
+    .swiper-pagination {
+      justify-content: center;
+    }
+  }
 }

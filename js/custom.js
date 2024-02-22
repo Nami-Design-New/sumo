@@ -334,4 +334,33 @@ function dehighlight(el) {
   if (el.value === "") {
     el.previousElementSibling.classList.remove("h");
   }
-}
+}//partnersSlider Slider
+var partnersSlider = new Swiper(".partnersSlider", {
+  // centeredSlides: true,
+  loop: true,
+  slidesPerView: "auto",
+  spaceBetween: 12,
+  speed: 1000,
+  pagination: {
+    el: ".partnersPagination",
+    clickable: true,
+  },
+  autoplay: {
+    delay: 1500,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 3,
+    },
+    768: {
+      slidesPerView: 4,
+    },
+    991: {
+      slidesPerView: 5,
+    },
+    1400: {
+      slidesPerView: 7,
+    },
+  },
+});
