@@ -364,3 +364,32 @@ var partnersSlider = new Swiper(".partnersSlider", {
     },
   },
 });
+
+
+
+
+
+
+
+
+
+
+
+let categoriesToggler = document.getElementById("toggleCategories");
+let categories = document.querySelector(".categoriesList");
+categoriesToggler.addEventListener("mouseenter", () => {
+  if (categories.classList.contains("show") == false) {
+    categories.classList.add("show");
+  }
+});
+categoriesToggler.addEventListener("mouseleave", () => {
+  if (categories.classList.contains("show") == true) {
+    categories.classList.remove("show");
+  }
+});
+categories.addEventListener("mouseenter", () => {
+  categories.classList.add("show");
+});
+categories.addEventListener("mouseleave", () => {
+  categories.classList.remove("show");
+});

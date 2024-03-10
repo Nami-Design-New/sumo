@@ -351,6 +351,39 @@ header .inner .navbar .navbar-nav {
   flex: 1;
   gap: 4px;
 }
+header .inner .navbar .navbar-nav li {
+  position: relative;
+  display: flex;
+}
+header .inner .navbar .navbar-nav li .dropdownMenu {
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 120%;
+  background: #ffffff;
+  z-index: 889;
+  box-shadow: 0px 2px 4px #c1c1c1;
+  border-radius: 12px;
+  transition: 0.3s ease-in-out;
+}
+header .inner .navbar .navbar-nav li .dropdownMenu.show {
+  height: 335px;
+}
+header .inner .navbar .navbar-nav li .dropdownMenu ul {
+  padding: 16px 24px;
+}
+header .inner .navbar .navbar-nav li .dropdownMenu ul li {
+  padding: 8px 0;
+  border-bottom: 1px solid #f4f4f4;
+}
+header .inner .navbar .navbar-nav li .dropdownMenu ul li a {
+  white-space: nowrap;
+  color: #131518;
+  font-size: 14px;
+}
+header .inner .navbar .navbar-nav li .dropdownMenu ul li:last-child {
+  border-bottom: none;
+}
 header .inner .navbar .navbar-nav .navLink {
   flex: 1;
   white-space: nowrap;

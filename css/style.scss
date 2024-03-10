@@ -340,6 +340,40 @@ header {
       .navbar-nav {
         flex: 1;
         gap: 4px;
+        li {
+          position: relative;
+          display: flex;
+          
+          .dropdownMenu {
+            height: 0;
+            overflow: hidden;
+            position: absolute;
+            top: 120%;
+            background: $whiteColor;
+            z-index: 889;
+            box-shadow: $shadow;
+            border-radius: 12px;
+            transition: $transition;
+            &.show {
+              height: 335px;
+            }
+            ul {
+              padding: 16px 24px;
+              li {
+                padding: 8px 0;
+                border-bottom: 1px solid #f4f4f4;
+                a {
+                  white-space: nowrap;
+                  color: $darkColor;
+                  font-size: 14px;
+                }
+                &:last-child {
+                  border-bottom: none;
+                }
+              }
+            }
+          }
+        }
         .navLink {
           flex: 1;
           white-space: nowrap;
