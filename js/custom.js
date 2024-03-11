@@ -334,7 +334,7 @@ function dehighlight(el) {
   if (el.value === "") {
     el.previousElementSibling.classList.remove("h");
   }
-}//partnersSlider Slider
+} //partnersSlider Slider
 var partnersSlider = new Swiper(".partnersSlider", {
   // centeredSlides: true,
   loop: true,
@@ -364,16 +364,30 @@ var partnersSlider = new Swiper(".partnersSlider", {
     },
   },
 });
-
-
-
-
-
-
-
-
-
-
+// swiper-team
+var swiper = new Swiper(".testimonilas", {
+  loop: true,
+  spaceBetween: 30,
+  speed: 2000,
+  pagination: {
+    el: ".testimonialsSwiperPagination",
+    clickable: true
+  },
+  autoplay: {
+    delay: 2500
+  },
+  breakpoints: {
+    992: {
+      slidesPerView: 3
+    },
+    768: {
+      slidesPerView: 2
+    },
+    350: {
+      slidesPerView: 1
+    }
+  }
+});
 
 let categoriesToggler = document.getElementById("toggleCategories");
 let categories = document.querySelector(".categoriesList");
