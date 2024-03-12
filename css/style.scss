@@ -2164,3 +2164,143 @@ select {
     }
   }
 }
+.blogs {
+  .blog {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: $transition;
+    img {
+      height: 250px;
+      object-fit: cover;
+      width: 100%;
+    }
+    .data {
+      padding: 10px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .date {
+      color: $mainColor;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      transition: $transition;
+      margin-top: auto;
+      i {
+        font-size: 16px;
+      }
+    }
+    .title {
+      color: $mainColor;
+      font-weight: bold;
+    }
+    .description {
+      color: $grayColor;
+      margin-bottom: auto;
+    }
+    &:hover {
+      transform: translateY(-5px);
+      // box-shadow: var(--BigShadow);
+      // background-color: #161616;
+      .title {
+        color: var(--mainColor);
+      }
+      .date {
+        // color: var(--whiteColor);
+        i {
+          color: var(--whiteColor);
+        }
+      }
+    }
+  }
+  .swiperControl {
+    position: relative;
+    .swiper-pagination {
+      justify-content: center;
+    }
+  }
+}
+.blogDetails {
+  padding: 50px 0;
+  .blog {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: $transition;
+    padding-bottom: 48px;
+    .blogSwiper {
+      width: 100%;
+    }
+    img {
+      object-fit: cover;
+      width: 100%;
+    }
+    .date {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      color: $mainColor;
+      color: #777;
+      i {
+        font-size: 16px;
+      }
+    }
+    .title {
+      color: $mainColor;
+      transition: $transition;
+    }
+    .description {
+      color: $grayColor;
+    }
+  }
+  .Moreblogs {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    height: 100%;
+    gap: 32px;
+    .headTitle {
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 30px;
+      position: relative;
+      &::after {
+        content: "";
+        width: 30%;
+        background-color: $mainColor;
+        height: 2px;
+        display: flex;
+        margin-top: 5px;
+      }
+      @media (max-width: 768px) {
+        font-size: 22px;
+      }
+    }
+    .blog {
+      display: flex;
+      gap: 12px;
+      height: fit-content;
+      flex-direction: row;
+      padding-bottom: 0px;
+      padding: 0;
+      .data {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .title {
+        color: $mainColor;
+      }
+      img {
+        width: 120px;
+        height: 120px;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+      }
+    }
+  }
+}

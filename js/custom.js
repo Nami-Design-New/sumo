@@ -443,3 +443,37 @@ innerLinks.addEventListener("mouseenter", () => {
 innerLinks.addEventListener("mouseleave", () => {
   innerLinks.classList.remove("show");
 });
+
+var blogSlider = new Swiper(".blogSlider", {
+  pagination: {
+    el: ".blogPagination",
+    clickable: true,
+  },
+  slidesPerView: "auto",
+  spaceBetween: 10,
+  speed: 1000,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    991: {
+      slidesPerView: 3,
+    },
+  },
+});
+
+var blogSwiper = new Swiper(".blogSwiper", {
+  spaceBetween: 10,
+  speed: 1000,
+  effect: "fade",
+  autoplay: {
+    delay: 2500,
+  }
+});
