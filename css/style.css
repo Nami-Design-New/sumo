@@ -328,9 +328,6 @@ header .inner .navbar-brand {
 }
 header .inner .navbar-brand img {
   height: 36px;
-  min-width: 120px;
-  max-width: 250px;
-  width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -368,6 +365,9 @@ header .inner .navbar .navbar-nav li .dropdownMenu {
 }
 header .inner .navbar .navbar-nav li .dropdownMenu.show {
   height: 335px;
+}
+header .inner .navbar .navbar-nav li .dropdownMenu.innerLinks.show {
+  height: 108px;
 }
 header .inner .navbar .navbar-nav li .dropdownMenu ul {
   padding: 16px 24px;
@@ -439,7 +439,7 @@ header .inner .moreActions {
   padding: 5px;
   flex: 1;
   display: flex;
-  justify-content: center;
+  justify-content: end;
   gap: 8px;
   align-items: center;
 }
@@ -451,10 +451,13 @@ header .inner .moreActions {
 header .inner .moreActions a {
   color: #131518;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 8px;
   padding: 8px;
   justify-content: center;
+}
+header .inner .moreActions a i {
+  font-size: 18px;
 }
 header .inner .moreActions a img {
   width: 16px;
@@ -1708,52 +1711,53 @@ footer .social a:hover {
   padding: 60px 0;
   position: relative;
 }
-.courses_section .course_card {
+
+.course_card {
   background: #fff;
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.02);
   padding: 20px;
   border-radius: 20px;
 }
-.courses_section .course_card .content {
+.course_card .content {
   display: flex;
   flex-direction: column;
   width: 100%;
   gap: 64px;
 }
-.courses_section .course_card .content .title {
+.course_card .content .title {
   font-weight: bold;
   font-size: 20px;
   color: #131518;
   margin-bottom: auto;
 }
-.courses_section .course_card .content .time_date {
+.course_card .content .time_date {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-.courses_section .course_card .content .time_date .animatedLink span::after {
+.course_card .content .time_date .animatedLink span::after {
   width: 42px;
   height: 42px;
 }
-.courses_section .course_card .content .time_date .animatedLink span {
+.course_card .content .time_date .animatedLink span {
   width: 42px;
   height: 42px;
 }
-.courses_section .course_card .content .time_date .animatedLink span img {
+.course_card .content .time_date .animatedLink span img {
   width: auto;
   height: 16px;
 }
-.courses_section .course_card .content .time_date .animatedLink:hover span::after {
+.course_card .content .time_date .animatedLink:hover span::after {
   width: 100%;
 }
-.courses_section .course_card .content .location,
-.courses_section .course_card .content .date {
+.course_card .content .location,
+.course_card .content .date {
   display: flex;
   align-items: center;
   gap: 8px;
 }
-.courses_section .course_card .content .location img,
-.courses_section .course_card .content .date img {
+.course_card .content .location img,
+.course_card .content .date img {
   width: 16px;
   aspect-ratio: 1/1;
   -o-object-fit: contain;
@@ -1767,17 +1771,17 @@ select::-webkit-scrollbar {
 .about_course {
   display: flex;
   flex-direction: column;
-  gap: 14px;
 }
-.about_course h3 {
+.about_course h3,
+.about_course h2 {
   color: #064252;
   font-weight: 600;
-}
-.about_course h6 {
-  color: #064252;
+  font-size: 16px;
+  margin-bottom: 8px;
 }
 .about_course p {
   font-size: 14px;
+  margin-bottom: 10px;
   color: #777;
 }
 .about_course .location,
@@ -1797,13 +1801,15 @@ select::-webkit-scrollbar {
   -o-object-fit: contain;
      object-fit: contain;
 }
+.about_course .title {
+  font-size: 24px;
+}
 
 .registerCourse {
   padding: 24px 16px;
   background: #fff;
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.02);
   border-radius: 20px;
-  height: 100%;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -1828,6 +1834,57 @@ select::-webkit-scrollbar {
 }
 .registerCourse button:hover {
   background: #064252;
+}
+.registerCourse .location-time {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.registerCourse .location-time .checkField {
+  width: 100%;
+  height: 48px;
+}
+.registerCourse .location-time .checkField label {
+  position: relative;
+  width: 100%;
+  isolation: isolate;
+  cursor: pointer;
+}
+.registerCourse .location-time .checkField label .innerField {
+  padding: 8px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+.registerCourse .location-time .checkField label .innerField span {
+  display: flex;
+  align-items: center;
+}
+.registerCourse .location-time .checkField label input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 100%;
+  height: 48px;
+  border: 1px solid #d6d6d6;
+  border-radius: 4px;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  transition: 0.3s ease-in-out;
+}
+.registerCourse .location-time .checkField label input:checked {
+  border: 1px solid #064252;
+  background: #064252;
+}
+.registerCourse .location-time .checkField label input:checked + div {
+  color: #ffffff;
+}
+
+.relatedCourses {
+  padding-bottom: 60px;
 }
 
 .e-learning {
@@ -2121,11 +2178,27 @@ select::-webkit-scrollbar {
 }
 
 .statistics {
-  padding: 60px 0;
+  padding-bottom: 60px;
 }
 .statistics .statistics_container {
   background-color: #ffffff;
   box-shadow: 0 16px 32px 0 rgba(7, 28, 31, 0.1019607843);
   padding: 24px;
   border-radius: 12px;
+}
+.statistics .statistics_container .statistic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.statistics .statistics_container .statistic h2 {
+  color: #064252;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.statistics .statistics_container .statistic P {
+  font-size: 18px;
+  color: #777;
 }/*# sourceMappingURL=style.css.map */

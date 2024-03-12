@@ -72,14 +72,27 @@
                     </li>
                     <li><a class="navLink" href="somu-tech.html"> Somu Tech </a></li>
                     <li><a class="navLink" href="e-learning.html"> E-Learning </a></li>
-                    <li><a class="navLink" href="corporate-solutions.html"> Corporate solutions </a></li>
-                    <li><a class="navLink" href="about-us.html"> about Us</a></li>
+                    <li><a class="navLink" href="corporate-solutions.html" id="toggleInnerLinks"> Corporate solutions
+                        </a>
+                        <div class="dropdownMenu innerLinks">
+                            <ul>
+                                <li>
+                                    <a href="corporate-solutions.html#Training-Solutions">Training Solutions</a>
+                                </li>
+                                <li>
+                                    <a href="corporate-solutions.html#Leadership-Training">Leadership Training</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a class="navLink" href="blogs.html"> blogs</a></li>
+          <li><a class="navLink" href="about-us.html"> about Us</a></li>
                     <li><a class="navLink" href="contact-us.html"> Contact Us </a></li>
                 </ul>
             </nav>
             <!-- Actions -->
             <div class="moreActions">
-                <a href="#!"> عربي </a>
+                <a href="#!"> عربي <i class="fa-sharp fa-light fa-language"></i></a>
             </div>
         </section>
     </header>
@@ -103,55 +116,89 @@
                 <div class="row">
                     <div class="col-lg-7 col-12 p-3">
                         <div class="about_course">
-                            <h3>Mastering People Management</h3>
-                            <h6>Course Description</h6>
-                            <p>
-                                OBJECTIVES By the end of this seminar you will be able to: • Understanding your role as
-                                manager and leader • Establishing clear objectives and standards of performance for your
-                                team • Managing your workload using effective prioritisation and delegation techniques •
-                                Maximising your influencing skills • Building an effective team • Developing and
-                                leveraging the capabilities of team members WHO SHOULD ATTEND? Team leaders, supervisors
-                                and professionals new to the role, or with experience but little previous training.
-                                Course Outline Understanding Your Role • Leader or manager? • Self-perception • Beyond
-                                the job description: finding out what your organisation requires of you • Balancing
-                                conflicting stakeholder demands • Understanding the nature of change • A model for
-                                implementing change Personal Effectiveness, Time Management and Delegation •
-                                Understanding yourself and your organisational environment • Outcome orientation •
-                                Setting personal and team objectives • Managing performance • Finding and using time
-                                effectively • A model for effective delegation Communication, Influence & Conflict
-                                Management • Channels of communication • Effective listening skills • Emotions and
-                                rapport • Persuasion and negotiation: the keys to personal influence • Managing conflict
-                                assertively Team Building, People Management and Motivation • How high-performing teams
-                                work • Identifying team roles • Teams in practice: teambuilding exercise • Motivation
-                                and reward • Building and sharing a vision for the team • Different approaches to
-                                leadership Enhancing Team Performance through Coaching & Development • How people learn
-                                • Coaching for personal and team growth • Feedback skills • Development planning • Next
-                                steps
-                            </p>
-                            <div class="row m-0">
-                                <div class="col-lg-6 col-12 p-lg-0 p-2">
-                                    <div class="d-flex gap-3">
-                                        <p class="date"> <img src="img/icons/date.svg" alt=""> 2023-02-12 </p>
-                                        <p class="lang"> <i class="fa-sharp fa-light fa-language"></i> English</p>
-                                    </div>
-                                    <p class="location"><img src="img/icons/location.svg" alt=""> Saudi Arabia,
-                                        Al-Khobar
-                                    </p>
-                                </div>
-                                <div
-                                    class="col-lg-6 col-12 p-lg-0 p-2 d-flex justify-content-lg-end justify-content-start">
-                                    <a href="eldemeshki_menu.pdf" target="_blank" class="animatedLink">
-                                        Course OutLines
-                                        <span>
-                                            <img src="img/icons/arrowLink.svg" alt="">
-                                        </span>
-                                    </a>
-                                </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h3 class="title">Mastering People Management</h3>
+                                <a href="eldemeshki_menu.pdf" target="_blank" class="animatedLink">
+                                    Course OutLines
+                                    <span>
+                                        <img src="img/icons/arrowLink.svg" alt="">
+                                    </span>
+                                </a>
                             </div>
+                            <h2>OBJECTIVES</h2>
+                            <p>By the end of this seminar, participants will be able to:</p>
+                            <ul>
+                                <li>Understand their role as a manager and leader</li>
+                                <li>Establish clear objectives and standards of performance for their team</li>
+                                <li>Manage their workload using effective prioritization and delegation techniques</li>
+                                <li>Maximize their influencing skills</li>
+                                <li>Build an effective team</li>
+                                <li>Develop and leverage the capabilities of team members</li>
+                            </ul>
+                            <h2>WHO SHOULD ATTEND?</h2>
+                            <p>Team leaders, supervisors, and professionals new to the role, or with experience but
+                                little previous training.</p>
+                            <h2>Course Outline</h2>
+                            <h3>Understanding Your Role</h3>
+                            <ul>
+                                <li>Leader or manager?</li>
+                                <li>Self-perception</li>
+                                <li>Beyond the job description: finding out what your organization requires of you</li>
+                                <li>Balancing conflicting stakeholder demands</li>
+                                <li>Understanding the nature of change</li>
+                                <li>A model for implementing change</li>
+                            </ul>
+                            <h3>Personal Effectiveness, Time Management, and Delegation</h3>
+                            <ul>
+                                <li>Understanding yourself and your organizational environment</li>
+                                <li>Outcome orientation</li>
+                                <li>Setting personal and team objectives</li>
+                                <li>Managing performance</li>
+                                <li>Finding and using time effectively</li>
+                                <li>A model for effective delegation</li>
+                            </ul>
                         </div>
                     </div>
                     <div class="col-lg-5 col-12 p-3">
                         <form action="" class="registerCourse">
+                            <div class="location-time">
+                                <div class="checkField">
+                                    <label for="1">
+                                        <input type="radio" checked name="location" id="1">
+                                        <div class="innerField">
+                                            <span>KSA, Riyadh</span> <span>|</span>
+                                            <span>Mar 18-21, 2024</span>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="checkField">
+                                    <label for="2">
+                                        <input type="radio" name="location" id="2">
+                                        <div class="innerField">
+                                            <span>EG, Cario</span> <span>|</span>
+                                            <span>Mar 18-21, 2024</span>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="checkField">
+                                    <label for="3">
+                                        <input type="radio" name="location" id="3">
+                                        <div class="innerField">
+                                            <span>KSA, Jadah</span> <span>|</span>
+                                            <span>Mar 18-21, 2024</span>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="checkField">
+                                    <label for="4">
+                                        <input type="radio" name="location" id="4">
+                                        <div class="innerField">
+                                            <span>UAE, Abu Dhabi</span> <span>|</span>
+                                            <span>Mar 18-21, 2024</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
                             <div class="field">
                                 <label for="name"> Full Name </label>
                                 <input type="text" name="name" id="name" class="form-control" placeholder="full name">
@@ -173,6 +220,168 @@
                             </div>
                             <button>Register</button>
                         </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- related courses -->
+        <section class="relatedCourses">
+            <div class="container">
+                <div class="sectionTop">
+                    <h2 class="sectionTitle" data-aos="fade-up"> Related Courses</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 col-6 p-2">
+                        <div class="course_card">
+                            <div class="content">
+                                <h5 class="title"> Leading Innovation in your Team </h5>
+                                <div class="time_date">
+                                    <p class="date"> <img src="img/icons/date.svg" alt=""> 2023-02-12 </p>
+                                    <p class="location"><img src="img/icons/location.svg" alt=""> Saudi Arabia,
+                                        Al-Khobar
+                                    </p>
+                                    <a href="course-details.html" class="animatedLink">
+                                        Register Now
+                                        <span>
+                                            <img src="img/icons/arrowLink.svg" alt="">
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6 p-2">
+                        <div class="course_card">
+                            <div class="content">
+                                <h5 class="title"> Leading Innovation in your Team </h5>
+                                <div class="time_date">
+                                    <p class="date"> <img src="img/icons/date.svg" alt=""> 2023-02-12 </p>
+                                    <p class="location"><img src="img/icons/location.svg" alt=""> Saudi Arabia,
+                                        Al-Khobar
+                                    </p>
+                                    <a href="course-details.html" class="animatedLink">
+                                        Register Now
+                                        <span>
+                                            <img src="img/icons/arrowLink.svg" alt="">
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6 p-2">
+                        <div class="course_card">
+                            <div class="content">
+                                <h5 class="title"> Leading Innovation in your Team </h5>
+                                <div class="time_date">
+                                    <p class="date"> <img src="img/icons/date.svg" alt=""> 2023-02-12 </p>
+                                    <p class="location"><img src="img/icons/location.svg" alt=""> Saudi Arabia,
+                                        Al-Khobar
+                                    </p>
+                                    <a href="course-details.html" class="animatedLink">
+                                        Register Now
+                                        <span>
+                                            <img src="img/icons/arrowLink.svg" alt="">
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6 p-2">
+                        <div class="course_card">
+                            <div class="content">
+                                <h5 class="title"> Leading Innovation in your Team </h5>
+                                <div class="time_date">
+                                    <p class="date"> <img src="img/icons/date.svg" alt=""> 2023-02-12 </p>
+                                    <p class="location"><img src="img/icons/location.svg" alt=""> Saudi Arabia,
+                                        Al-Khobar
+                                    </p>
+                                    <a href="course-details.html" class="animatedLink">
+                                        Register Now
+                                        <span>
+                                            <img src="img/icons/arrowLink.svg" alt="">
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6 p-2">
+                        <div class="course_card">
+                            <div class="content">
+                                <h5 class="title"> Leading Innovation in your Team </h5>
+                                <div class="time_date">
+                                    <p class="date"> <img src="img/icons/date.svg" alt=""> 2023-02-12 </p>
+                                    <p class="location"><img src="img/icons/location.svg" alt=""> Saudi Arabia,
+                                        Al-Khobar
+                                    </p>
+                                    <a href="course-details.html" class="animatedLink">
+                                        Register Now
+                                        <span>
+                                            <img src="img/icons/arrowLink.svg" alt="">
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6 p-2">
+                        <div class="course_card">
+                            <div class="content">
+                                <h5 class="title"> Leading Innovation in your Team </h5>
+                                <div class="time_date">
+                                    <p class="date"> <img src="img/icons/date.svg" alt=""> 2023-02-12 </p>
+                                    <p class="location"><img src="img/icons/location.svg" alt=""> Saudi Arabia,
+                                        Al-Khobar
+                                    </p>
+                                    <a href="course-details.html" class="animatedLink">
+                                        Register Now
+                                        <span>
+                                            <img src="img/icons/arrowLink.svg" alt="">
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6 p-2">
+                        <div class="course_card">
+                            <div class="content">
+                                <h5 class="title"> Leading Innovation in your Team </h5>
+                                <div class="time_date">
+                                    <p class="date"> <img src="img/icons/date.svg" alt=""> 2023-02-12 </p>
+                                    <p class="location"><img src="img/icons/location.svg" alt=""> Saudi Arabia,
+                                        Al-Khobar
+                                    </p>
+                                    <a href="course-details.html" class="animatedLink">
+                                        Register Now
+                                        <span>
+                                            <img src="img/icons/arrowLink.svg" alt="">
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6 p-2">
+                        <div class="course_card">
+                            <div class="content">
+                                <h5 class="title"> Leading Innovation in your Team </h5>
+                                <div class="time_date">
+                                    <p class="date"> <img src="img/icons/date.svg" alt=""> 2023-02-12 </p>
+                                    <p class="location"><img src="img/icons/location.svg" alt=""> Saudi Arabia,
+                                        Al-Khobar
+                                    </p>
+                                    <a href="course-details.html" class="animatedLink">
+                                        Register Now
+                                        <span>
+                                            <img src="img/icons/arrowLink.svg" alt="">
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

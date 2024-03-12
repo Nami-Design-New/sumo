@@ -321,9 +321,6 @@ header {
       flex: 1;
       img {
         height: 36px;
-        min-width: 120px;
-        max-width: 250px;
-        width: 100%;
         object-fit: contain;
         @media screen and (max-width: 992px) {
           object-position: left;
@@ -356,6 +353,9 @@ header {
             transition: $transition;
             &.show {
               height: 335px;
+            }
+            &.innerLinks.show {
+              height: 108px;
             }
             ul {
               padding: 16px 24px;
@@ -430,7 +430,7 @@ header {
       padding: 5px;
       flex: 1;
       display: flex;
-      justify-content: center;
+      justify-content: end;
       gap: 8px;
       align-items: center;
       @media screen and (max-width: 992px) {
@@ -439,10 +439,13 @@ header {
       a {
         color: $darkColor;
         display: flex;
-        align-items: baseline;
+        align-items: center;
         gap: 8px;
         padding: 8px;
         justify-content: center;
+        i {
+          font-size: 18px;
+        }
         img {
           width: 16px;
           height: 16px;
@@ -1682,52 +1685,52 @@ footer {
 .courses_section {
   padding: 60px 0;
   position: relative;
-  .course_card {
-    background: #fff;
-    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.02);
-    padding: 20px;
-    border-radius: 20px;
-    .content {
+}
+.course_card {
+  background: #fff;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.02);
+  padding: 20px;
+  border-radius: 20px;
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 64px;
+    .title {
+      font-weight: bold;
+      font-size: 20px;
+      color: $darkColor;
+      margin-bottom: auto;
+    }
+    .time_date {
       display: flex;
       flex-direction: column;
-      width: 100%;
-      gap: 64px;
-      .title {
-        font-weight: bold;
-        font-size: 20px;
-        color: $darkColor;
-        margin-bottom: auto;
+      gap: 8px;
+      .animatedLink span::after {
+        width: 42px;
+        height: 42px;
       }
-      .time_date {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        .animatedLink span::after {
-          width: 42px;
-          height: 42px;
-        }
-        .animatedLink span {
-          width: 42px;
-          height: 42px;
-        }
-        .animatedLink span img {
-          width: auto;
-          height: 16px;
-        }
-        .animatedLink:hover span::after {
-          width: 100%;
-        }
+      .animatedLink span {
+        width: 42px;
+        height: 42px;
       }
-      .location,
-      .date {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        img {
-          width: 16px;
-          aspect-ratio: 1/1;
-          object-fit: contain;
-        }
+      .animatedLink span img {
+        width: auto;
+        height: 16px;
+      }
+      .animatedLink:hover span::after {
+        width: 100%;
+      }
+    }
+    .location,
+    .date {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      img {
+        width: 16px;
+        aspect-ratio: 1/1;
+        object-fit: contain;
       }
     }
   }
@@ -1740,16 +1743,16 @@ select {
 .about_course {
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  h3 {
+  h3,
+  h2 {
     color: $mainColor;
     font-weight: 600;
-  }
-  h6 {
-    color: $mainColor;
+    font-size: 16px;
+    margin-bottom: 8px;
   }
   p {
     font-size: 14px;
+    margin-bottom: 10px;
     color: $grayColor;
   }
   .location,
@@ -1766,13 +1769,15 @@ select {
       object-fit: contain;
     }
   }
+  .title {
+    font-size: 24px;
+  }
 }
 .registerCourse {
   padding: 24px 16px;
   background: #fff;
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.02);
   border-radius: 20px;
-  height: 100%;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -1797,6 +1802,54 @@ select {
       background: $mainColor;
     }
   }
+  .location-time {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    .checkField {
+      width: 100%;
+      height: 48px;
+      label {
+        position: relative;
+        width: 100%;
+        isolation: isolate;
+        cursor: pointer;
+        .innerField {
+          padding: 8px;
+          height: 48px;
+          display: flex;
+          justify-content: center;
+          gap: 8px;
+          span {
+            display: flex;
+            align-items: center;
+          }
+        }
+        input {
+          appearance: none;
+          width: 100%;
+          height: 48px;
+          border: 1px solid $lightGrayColor;
+          border-radius: 4px;
+          position: absolute;
+          z-index: -1;
+          top: 0;
+          left: 0;
+          transition: $transition;
+          &:checked {
+            border: 1px solid $mainColor;
+            background: $mainColor;
+            & + div {
+              color: $whiteColor;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.relatedCourses {
+  padding-bottom: 60px;
 }
 
 .e-learning {
@@ -2086,12 +2139,28 @@ select {
     }
   }
 }
-.statistics{
-  padding: 60px 0;
-  .statistics_container{
+.statistics {
+  padding-bottom: 60px;
+  .statistics_container {
     background-color: #ffffff;
     box-shadow: 0 16px 32px 0 rgba(7, 28, 31, 0.1019607843);
     padding: 24px;
     border-radius: 12px;
+    .statistic {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      h2 {
+        color: $mainColor;
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      P {
+        font-size: 18px;
+        color: $grayColor;
+      }
+    }
   }
 }

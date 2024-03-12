@@ -256,6 +256,23 @@ $(document).ready(function () {
       $(this).text(truncatedText);
     }
   });
+  // counter up
+  const counterUp = window.counterUp.default;
+  const callback = (entries) => {
+    entries.forEach((entry) => {
+      const el = entry.target;
+      if (entry.isIntersecting && !el.classList.contains("is-visible")) {
+        counterUp(el, {
+          duration: 3000,
+          delay: 16,
+        });
+        el.classList.add("is-visible");
+      }
+    });
+  };
+  const IO = new IntersectionObserver(callback, { threshold: 1 });
+  const elements = document.querySelectorAll(".counterUp");
+  elements.forEach((el) => IO.observe(el));
 });
 // ////////////////////////////////////////
 // ////////////////////////////////////////
@@ -371,22 +388,22 @@ var swiper = new Swiper(".testimonilas", {
   speed: 2000,
   pagination: {
     el: ".testimonialsSwiperPagination",
-    clickable: true
+    clickable: true,
   },
   autoplay: {
-    delay: 2500
+    delay: 2500,
   },
   breakpoints: {
     992: {
-      slidesPerView: 3
+      slidesPerView: 3,
     },
     768: {
-      slidesPerView: 2
+      slidesPerView: 2,
     },
     350: {
-      slidesPerView: 1
-    }
-  }
+      slidesPerView: 1,
+    },
+  },
 });
 
 let categoriesToggler = document.getElementById("toggleCategories");
@@ -406,4 +423,23 @@ categories.addEventListener("mouseenter", () => {
 });
 categories.addEventListener("mouseleave", () => {
   categories.classList.remove("show");
+});
+
+let toggleInnerLinks = document.getElementById("toggleInnerLinks");
+let innerLinks = document.querySelector(".innerLinks");
+toggleInnerLinks.addEventListener("mouseenter", () => {
+  if (innerLinks.classList.contains("show") == false) {
+    innerLinks.classList.add("show");
+  }
+});
+toggleInnerLinks.addEventListener("mouseleave", () => {
+  if (innerLinks.classList.contains("show") == true) {
+    innerLinks.classList.remove("show");
+  }
+});
+innerLinks.addEventListener("mouseenter", () => {
+  innerLinks.classList.add("show");
+});
+innerLinks.addEventListener("mouseleave", () => {
+  innerLinks.classList.remove("show");
 });
