@@ -2203,6 +2203,9 @@ select::-webkit-scrollbar {
   color: #777;
 }
 
+.blogs {
+  padding: 50px 0;
+}
 .blogs .blog {
   height: 100%;
   display: flex;
@@ -2342,4 +2345,20 @@ select::-webkit-scrollbar {
   aspect-ratio: 1/1;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.trainingProviders {
+  padding: 50px 0;
+  background: rgba(6, 66, 82, 0.0509803922);
+}
+.trainingProviders .img {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.trainingProviders .img img {
+  height: 100px;
 }/*# sourceMappingURL=style.css.map */
