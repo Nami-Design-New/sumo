@@ -301,6 +301,7 @@ content {
 }
 
 header {
+  background: #ffffff;
   position: sticky;
   top: 0;
   left: 0;
@@ -338,8 +339,6 @@ header .inner .navbar-brand img {
   }
 }
 header .inner .navbar {
-  background-color: rgba(6, 66, 82, 0.0509803922);
-  border: 1px solid rgba(6, 66, 82, 0.2509803922);
   border-radius: 100px;
   padding: 6px;
   text-align: center;
@@ -615,16 +614,9 @@ header.headerAnimate {
   gap: 24px;
 }
 .heroSection .heroDescription h1 {
-  font-size: 48px;
+  font-size: 54px;
   color: #064252;
   font-weight: bold;
-}
-.heroSection .heroDescription h1 span {
-  background: linear-gradient(45deg, #064252 15%, #71c0e4 70%);
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
-  line-height: inherit;
 }
 .heroSection .heroDescription p {
   font-size: 16px;
@@ -876,14 +868,25 @@ header.headerAnimate {
 .flipCard .cardFront {
   width: 100%;
   height: 100%;
-  padding: 20px;
+  position: relative;
   border-radius: 20px;
   display: flex;
+  overflow: hidden;
   background-color: #ffffff;
   backface-visibility: hidden;
   transform: rotateY(0deg);
   transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.0509803922);
+}
+.flipCard .cardFront .img {
+  width: 100%;
+  height: 100%;
+}
+.flipCard .cardFront .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .flipCard .cardFront .cardLogo {
   width: 100%;
@@ -893,27 +896,36 @@ header.headerAnimate {
      object-fit: contain;
 }
 .flipCard .cardFront .content {
+  background: rgba(15, 15, 16, 0.7333333333);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   width: 100%;
   gap: 8px;
+  padding: 20px;
 }
 .flipCard .cardFront .content .title {
-  font-weight: bold;
-  font-size: 20px;
-  color: #131518;
+  font-size: 22px;
+  color: #ffffff;
   margin-bottom: auto;
 }
 .flipCard .cardFront .content .location,
 .flipCard .cardFront .content .date {
+  color: #ffffff;
   display: flex;
   align-items: center;
+  font-size: 14px;
   gap: 8px;
 }
 .flipCard .cardFront .content .location img,
 .flipCard .cardFront .content .date img {
-  width: 16px;
+  width: 14px;
   aspect-ratio: 1/1;
+  filter: brightness(0) invert(1);
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -1964,14 +1976,14 @@ select::-webkit-scrollbar {
   background-size: cover;
   background-attachment: fixed;
   background-position: bottom;
-  padding: 150px 0 50px;
+  padding: 100px 0 50px;
   position: relative;
   display: flex;
   isolation: isolate;
 }
 @media (max-width: 768px) {
   .banner {
-    padding: 200px 0 30px;
+    padding: 100px 0 30px;
   }
 }
 .banner::before {
@@ -2052,8 +2064,9 @@ select::-webkit-scrollbar {
   position: absolute;
   left: 0;
   bottom: 0;
+  height: 100%;
   width: 100%;
-  height: 0%;
+  border-radius: 12px;
   background-color: #ffffff;
   transition: 0.3s ease-in-out;
   z-index: -1;
@@ -2063,15 +2076,6 @@ select::-webkit-scrollbar {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-  filter: grayscale(1);
-  transition: 0.3s ease-in-out;
-}
-.partners .referenceLogo:hover::after {
-  content: "";
-  height: 100%;
-}
-.partners .referenceLogo:hover img {
-  filter: none;
 }
 .partners .swiperControl {
   position: relative;
@@ -2351,6 +2355,25 @@ select::-webkit-scrollbar {
   padding: 50px 0;
   background: rgba(6, 66, 82, 0.0509803922);
 }
+.trainingProviders .top {
+  margin-bottom: 40px;
+  text-align: center;
+}
+.trainingProviders .top .title {
+  font-weight: bold;
+  margin-bottom: 16px;
+  font-size: 36px !important;
+}
+@media (max-width: 768px) {
+  .trainingProviders .top .title {
+    font-size: 24px !important;
+  }
+}
+.trainingProviders .top .hint {
+  color: #777;
+  width: min(100% - 40px, 800px);
+  text-align: start;
+}
 .trainingProviders .img {
   background-color: #fff;
   border-radius: 12px;
@@ -2361,4 +2384,8 @@ select::-webkit-scrollbar {
 }
 .trainingProviders .img img {
   height: 100px;
+}
+
+.solutionTitle {
+  font-size: 36px !important;
 }/*# sourceMappingURL=style.css.map */
