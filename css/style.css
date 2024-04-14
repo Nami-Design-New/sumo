@@ -938,7 +938,6 @@ header.headerAnimate {
   backface-visibility: hidden;
   transform: rotateY(180deg);
   transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
-  box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.0509803922);
   background-color: #fff;
 }
 .flipCard .cardBack .content {
@@ -1556,6 +1555,24 @@ footer .social a:hover {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.about-us.tech {
+  background: #064252;
+  padding: 0;
+}
+.about-us.tech .text p {
+  color: #d6d6d6;
+}
+.about-us.tech .text h1 {
+  color: #ffffff;
+}
+@media screen and (max-width: 576px) {
+  .about-us.tech .text h1 {
+    font-size: 30px;
+  }
+}
+.about-us.tech .img {
+  border-radius: 0;
 }
 
 .waves {
