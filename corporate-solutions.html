@@ -111,56 +111,106 @@
                 </h2>
             </div>
         </section>
-        <section class="about-us" id="inhouseCourses">
+        <section class="about-us new_coporate" id="inhouseCourses">
             <div class="container">
-                <div class="row mb-4">
-                    <div class="col-lg-6 col-12 p-2">
-                        <form action="" class="registerCourse">
-                            <div class="field">
-                                <label for="name"> Full Name </label>
-                                <input type="text" name="name" id="name" class="form-control" placeholder="full name">
-                            </div>
-                            <div class="field">
-                                <label for="email"> Email Address </label>
-                                <input type="email" name="email" id="email" class="form-control"
-                                    placeholder="email address">
-                            </div>
-                            <div class="field">
-                                <label for="phone"> Phone Number </label>
-                                <input type="tel" name="phone" id="phone" class="form-control"
-                                    placeholder="0xxxxxxxxxxxxxxx">
-                            </div>
-                            <div class="field">
-                                <label for="message"> Message </label>
-                                <textarea name="message" id="message" placeholder="your message"
-                                    class="form-control"></textarea>
-                            </div>
-                            <button>Register</button>
-                        </form>
+                <div class="row">
+                    <div class="col-12 p-2">
+                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="pills-inHouse-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-inHouse" type="button" role="tab"
+                                    aria-controls="pills-inHouse" aria-selected="true">
+                                    INHOUSE COURSES
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-leadeship-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-leadeship" type="button" role="tab"
+                                    aria-controls="pills-leadeship" aria-selected="false">
+                                    LEADERSHIP COURSES
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-consulting-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-consulting" type="button" role="tab"
+                                    aria-controls="pills-consulting" aria-selected="false">
+                                    CONSULTING
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-consulting-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-consulting" type="button" role="tab"
+                                    aria-controls="pills-consulting" aria-selected="false">
+                                    COMPETENCY AREAS
+                                </button>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="col-lg-6 col-12 p-3">
-                        <div class="text">
-                            <h2 class="subtitle solutionTitle">Inhouse Courses </h2>
-                            <h4>MISSION</h4>
-                            <p>
-                                In each of our core competencies, we apply flexible and resourceful solutions designed
-                                to provide our clients with the best possible training solution at a price that supports
-                                realistic execution. We want to be your preferred provider for training services,
-                                personnel services and support, and intelligence and security management.
-                            </p>
-                            <h4>APPROACH</h4>
-                            <p>
-                                Our essential elements are comprised of Flexibility, Agility, Risk Mitigation and Risk
-                                Tolerance, Simplicity and an extreme Commitment to Excellence in all we do.
-                            </p>
-                            <h4>ATTITUDE</h4>
-                            <p>
-                                We know that professionalism is the key to all success. We stand by our programs.
-                                Failure is never an option.
-                            </p>
+                    <div class="col-12 p-2">
+                        <div class="tab-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-inHouse" role="tabpanel"
+                                aria-labelledby="pills-inHouse-tab">
+                                <div class="row mb-4">
+                                    <div class="col-lg-6 col-12 p-2">
+                                        <form action="" class="registerCourse">
+                                            <div class="field">
+                                                <label for="name"> Full Name </label>
+                                                <input type="text" name="name" id="name" class="form-control" placeholder="full name">
+                                            </div>
+                                            <div class="field">
+                                                <label for="email"> Email Address </label>
+                                                <input type="email" name="email" id="email" class="form-control"
+                                                    placeholder="email address">
+                                            </div>
+                                            <div class="field">
+                                                <label for="phone"> Phone Number </label>
+                                                <input type="tel" name="phone" id="phone" class="form-control"
+                                                    placeholder="0xxxxxxxxxxxxxxx">
+                                            </div>
+                                            <div class="field">
+                                                <label for="message"> Message </label>
+                                                <textarea name="message" id="message" placeholder="your message"
+                                                    class="form-control"></textarea>
+                                            </div>
+                                            <button>Register</button>
+                                        </form>
+                                    </div>
+                                    <div class="col-lg-6 col-12 p-3">
+                                        <div class="text">
+                                            <h2 class="subtitle solutionTitle">Inhouse Courses </h2>
+                                            <h4>MISSION</h4>
+                                            <p>
+                                                In each of our core competencies, we apply flexible and resourceful solutions designed
+                                                to provide our clients with the best possible training solution at a price that supports
+                                                realistic execution. We want to be your preferred provider for training services,
+                                                personnel services and support, and intelligence and security management.
+                                            </p>
+                                            <h4>APPROACH</h4>
+                                            <p>
+                                                Our essential elements are comprised of Flexibility, Agility, Risk Mitigation and Risk
+                                                Tolerance, Simplicity and an extreme Commitment to Excellence in all we do.
+                                            </p>
+                                            <h4>ATTITUDE</h4>
+                                            <p>
+                                                We know that professionalism is the key to all success. We stand by our programs.
+                                                Failure is never an option.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                                aria-labelledby="pills-profile-tab">...</div>
+                            <div class="tab-pane fade" id="pills-contact" role="tabpanel"
+                                aria-labelledby="pills-contact-tab">...</div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+        <section class="about-us" id="inhouseCourses">
+            <div class="container">
+                
             </div>
         </section>
         <section class="about-us bgs">

@@ -2405,4 +2405,26 @@ select::-webkit-scrollbar {
 
 .solutionTitle {
   font-size: 36px !important;
+}
+
+.new_coporate .nav-pills {
+  border-radius: 12px;
+  padding: 16px;
+  gap: 12px;
+  margin: 0;
+  background: #ffffff;
+}
+.new_coporate .nav-pills .nav-link {
+  transition: 0.3s ease-in-out;
+  flex: 1;
+  white-space: nowrap;
+  padding: 8px 16px;
+  color: #131518;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+.new_coporate .nav-pills .nav-link:hover, .new_coporate .nav-pills .nav-link.active {
+  background-color: #064252;
+  color: #ffffff;
+  border-radius: 100px;
 }/*# sourceMappingURL=style.css.map */
