@@ -2366,7 +2366,7 @@ select {
 }
 .new_coporate {
   .nav-pills {
-    border-radius: 12px;
+    border-radius: 200px;
     padding: 16px;
     gap: 12px;
     margin: 0;
@@ -2384,6 +2384,64 @@ select {
         background-color: $mainColor;
         color: $whiteColor;
         border-radius: 100px;
+      }
+    }
+  }
+}
+
+.advices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 30px;
+  @media screen and (max-width: 768px) {
+    gap: 8px;
+  }
+  .advice {
+    padding: 24px 16px;
+    flex: 1;
+    border: 1px dashed #d6d6d6;
+    display: flex;
+    flex-direction: column;
+    min-width: 250px;
+    border-radius: 12px;
+    transition: $transition;
+    h6 {
+      font-weight: bold;
+      transition: $transition;
+      position: relative;
+      padding-right: 24px;
+      span {
+        right: -8px;
+        top: -12px;
+        position: absolute;
+        font-size: 48px;
+        color: #fafafa;
+        font-weight: 800;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #c8c8c8;
+        transition: $transition;
+      }
+    }
+    p {
+      font-size: 14px;
+      line-height: 24px;
+      transition: $transition;
+    }
+    &:hover {
+      border-color: transparent;
+      background-color: $mainColor;
+      transform: translateY(-5px);
+      h6 {
+        color: white;
+        span {
+          color: $mainColor;
+          -webkit-text-stroke-color: $whiteColor;
+        }
+      }
+      p {
+        color: white;
       }
     }
   }
