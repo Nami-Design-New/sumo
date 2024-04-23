@@ -1744,17 +1744,43 @@ footer .social a:hover {
 .course_card {
   background: #fff;
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.02);
-  padding: 20px;
   border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  min-height: 340px;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+.course_card .img {
+  width: 100%;
+  height: 100%;
+}
+.course_card .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .course_card .content {
   display: flex;
   flex-direction: column;
   width: 100%;
   gap: 64px;
+  background: rgba(15, 15, 16, 0.7333333333);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 8px;
+  padding: 20px;
 }
 .course_card .content .title {
-  font-weight: bold;
   font-size: 20px;
   color: #131518;
   margin-bottom: auto;
@@ -1764,8 +1790,12 @@ footer .social a:hover {
   flex-direction: column;
   gap: 8px;
 }
+.course_card .content .time_date .animatedLink {
+  color: #ffffff;
+}
 .course_card .content .time_date .animatedLink span::after {
   width: 42px;
+  border-color: #ffffff;
   height: 42px;
 }
 .course_card .content .time_date .animatedLink span {
@@ -1774,10 +1804,12 @@ footer .social a:hover {
 }
 .course_card .content .time_date .animatedLink span img {
   width: auto;
+  filter: invert(1);
   height: 16px;
 }
 .course_card .content .time_date .animatedLink:hover span::after {
   width: 100%;
+  border-color: #064252;
 }
 .course_card .content .location,
 .course_card .content .date {
@@ -1789,6 +1821,40 @@ footer .social a:hover {
 .course_card .content .date img {
   width: 16px;
   aspect-ratio: 1/1;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.course_card .content {
+  background: rgba(15, 15, 16, 0.7333333333);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 8px;
+  padding: 20px;
+}
+.course_card .content .title {
+  font-size: 22px;
+  color: #ffffff;
+  margin-bottom: auto;
+}
+.course_card .content .location,
+.course_card .content .date {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  gap: 8px;
+}
+.course_card .content .location img,
+.course_card .content .date img {
+  width: 14px;
+  aspect-ratio: 1/1;
+  filter: brightness(0) invert(1);
   -o-object-fit: contain;
      object-fit: contain;
 }
