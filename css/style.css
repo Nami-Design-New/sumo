@@ -967,6 +967,21 @@ header.headerAnimate {
 .flipCard .cardBack .content .animatedLink {
   margin-left: auto;
 }
+.flipCard .cardBack.tech .content .animatedLink {
+  color: #cea85b;
+}
+.flipCard .cardBack.tech .content .animatedLink span::after {
+  border-color: #cea85b;
+}
+.flipCard .cardBack.tech .content .animatedLink:hover {
+  color: #ffffff;
+}
+.flipCard .cardBack.tech .content .animatedLink:hover span img {
+  filter: brightness(0) invert(1);
+}
+.flipCard .cardBack.tech .content .animatedLink:hover span::after {
+  background: #cea85b;
+}
 .flipCard:hover {
   z-index: 2;
 }
@@ -1557,7 +1572,7 @@ footer .social a:hover {
      object-fit: cover;
 }
 .about-us.tech {
-  background: #d3a452;
+  background: #064252;
   padding: 0;
 }
 .about-us.tech .text p {
@@ -2553,4 +2568,9 @@ select::-webkit-scrollbar {
 }
 .advices .advice:hover p {
   color: white;
+}
+
+.techTitle::after,
+.techTitle::before {
+  background: #bd1e2e;
 }/*# sourceMappingURL=style.css.map */
