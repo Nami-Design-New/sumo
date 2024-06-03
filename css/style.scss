@@ -2545,8 +2545,9 @@ select {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    gap: 32px;
+    gap: 16px;
     position: relative;
+    text-align: center;
 
     .techCourseBox {
       overflow: hidden;
@@ -2559,17 +2560,19 @@ select {
       display: flex;
       flex-direction: column;
       gap: 16px;
-      min-width: 300px;
+      min-width: 350px;
       flex: 1 0 0;
 
       .boxFigure {
         display: flex;
-        height: 300px;
+       
 
         img {
-          object-fit: cover;
+          object-fit: contain;
           width: 100%;
-          height: 100%;
+          aspect-ratio: 1/1;
+          padding: 16px;
+          max-height: 200px;
         }
       }
 
@@ -2629,7 +2632,7 @@ select {
           background-color: transparent;
           color: $mainColor;
           box-shadow: 0 0 2px 1px $mainColor20;
-
+font-size: 14px;
           &:hover {
             color: $whiteColor;
 
