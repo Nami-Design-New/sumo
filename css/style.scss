@@ -2593,12 +2593,13 @@ select {
         }
 
         p {
-          flex: 1 0 0;
           line-height: 1.6;
           margin: 0;
           color: #333;
-          display: flex;
-          align-items: center;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
         }
       }
 
